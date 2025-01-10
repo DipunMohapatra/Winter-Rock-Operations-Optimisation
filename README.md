@@ -25,6 +25,9 @@ Aggregate sales data was examined using a centered moving average of length 12 (
 
 ![Original Time Series & CMA](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/f68f4a69fcfd46cefc484fcdaa37f05947dc6b4a/Visualisations/Original%20Time%20Series%20%26%20CMA.png)
 - Annual Growth: CMA shows a consistent upward trend, with sales value increasing year on year. Initial CMA value of £788K in early periods grew steadily to £1.09M by December 2022.
+
+![Annual Seasonal Profile](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/Annual%20Seasonal%20Profile.png)
+
 - Seasonality: Median seasonal profile reveals a strong peak in sales value from October to January, with the highest detrended value exceeding 1.28. Off-peak periods exhibit values closer to the average or slightly below, with detrended values dipping as low as 0.78.
 The following are the implications of the analysis:
 - Inventory control and cost management: Increase inventory during the peak seasons (October – January). Allocate 10% additional stock based on forecasted sales and error measures, as excess inventory increases costs and reduces profit margins.
@@ -32,6 +35,8 @@ The following are the implications of the analysis:
 
 ### **3.2 Forecasting Sales of Year-Round Products**
 Simple Exponential Smoothing (SES) was applied to forecast sales for year-round products. SES leverages a single smoothing parameter, alpha (α), which ranges between 0 and 1. SES places greater weight on recent data while accounting for all historical data. The optimal alpha value was selected to minimise forecast error measures, including Mean Error (ME), Mean Absolute Error (MAE), and Mean Squared Error (MSE), and strike a balance between responsiveness to recent changes and stability of considering historical trends. The optimal α (smoothing factor) was selected based on minimising in-sample errors. Forecast accuracy was evaluated using various error metrics for both in-sample and out-of-sample periods. The choice of α (alpha) significantly impacts the smoothing process by controlling the weight given to recent versus older data. A value of α = 0.55 was selected as it strikes a balance between responsiveness to recent changes and stability by considering historical trends. This choice was guided by the dataset's characteristics, where sales exhibited consistent seasonality and gradual trends, making it essential to avoid overemphasising short-term fluctuations. The optimal α (smoothing factor) was selected based on minimising in-sample errors. Forecast accuracy was evaluated using various error metrics for both in-sample and out-of-sample periods.
+
+![SES Forecast](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/SES.png)
 
 There are pros and cons of each error measure which are as follows:
 - Mean Error (ME): It identifies if the model tends to overestimate or underestimate, but doesn’t capture the magnitude of errors.
@@ -68,12 +73,16 @@ Demand Constraints:
 - XME + XLE = 2,000 
 - XMW + XLW = 930 
 - XMN + XLN = 2,200
-**Optimised distribution plan**
 
- Linear programming optimised shipping costs to £99,615 by allocating 2,000 units to the East and 500 to the North from Manchester, and 930 units to the West and 1,700 to the North from London. 
+**Optimised distribution plan**
+  
+![Distribution Plan](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/Distribution%20Plan.png)
+- Linear programming optimised shipping costs to £99,615 by allocating 2,000 units to the East and 500 to the North from Manchester, and 930 units to the West and 1,700 to the North from London. 
 
 ### **3.4 Supplier choice based on MAXIMAX, MAXIMIN AND MINIMAX**
 Winter Rock faces a dilemma of choosing the optimal supplier to procure mountain skis with bindings that the company wishes to sell at £150. The company has two assumptions: (1) if strong demand is generated, it will be able to sell 1,000 skis, and (2) under low demand conditions, it will be able to sell only 500 skis. Winter Rock needs to decide which supplier to contract. Calculations for gross profit were performed for two suppliers under two different demand scenarios, and a decision tree was made to help visualise the decision process.
+
+![Supplier Choice](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/Supplier%20Choice%20(2).jpg)
 
 **Decision Approaches**
 
@@ -99,8 +108,14 @@ The stakeholders at Winter Rock are sceptical about the decision analysis. The s
 - **Average Profit:** Profitability for EU supplier shows frequent negative outcomes, with an average loss of £6,688. Profitability for USA supplier is consistently positive, with most values clustering around the average of £19,710.
 - **Standard deviation of Profit:** The higher standard deviation (£24,365) for the Europe supplier reflects greater variability in profits, increasing financial risk under uncertainty. The lower standard deviation (£8,648) for the USA supplier demonstrates more stable profitability, reducing risk for Winter Rock.
 **Profit probability distribution**
+  
+  ![Profit - Europe Supplier](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/Profit%20-%20Europe%20Supplier.png)
+
 - The European supplier's lower capacity leads to consistent opportunity losses and higher profit variability, increasing financial risk.
 - The European supplier, limited to 500 units, poses higher opportunity losses, with majority of profit probability (69.1%) occurring between profit range of £14.500 and –£34,000.
+
+![Profit - USA Supplier](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/2beee3c66148aaa7ba3ec0c3c63ed85b360688f3/Visualisations/Profit%20-%20USA%20Supplier.png)
+
 - The USA supplier offers a higher average profit and significantly lower variability, making it the better choice under uncertain demand conditions.
 - It is recommended to contract the American supplier, with a 79.1% probability of profits between £22,000 and £10,000
 ## **4. Final Recommendations**
