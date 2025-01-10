@@ -22,6 +22,8 @@ Recommendations:
 ## **3. Insights Deep-Dive**
 ###	**3.1 Investigating Sales Trends**
 Aggregate sales data was examined using a centered moving average of length 12 (CMA-12) to identify patterns and seasonality. The analysis was followed by calculating 12-month rolling average to compute the de-trended values by dividing the actual sales value by the 12-month rolling average. The 12-month rolling average smooths the data, representing the underlying trend. Dividing the actual sales value by the 12-month rolling average, removes the trend, leaving only the seasonal component. The de-trended value were further arranged in a seasonal matrix to understand the seasonality year-on-year. The following are the key insights of the analysis:
+
+![Original Time Series & CMA](https://github.com/DipunMohapatra/Winter-Rock-Operations-Optimisation/blob/f68f4a69fcfd46cefc484fcdaa37f05947dc6b4a/Visualisations/Original%20Time%20Series%20%26%20CMA.png)
 - Annual Growth: CMA shows a consistent upward trend, with sales value increasing year on year. Initial CMA value of £788K in early periods grew steadily to £1.09M by December 2022.
 - Seasonality: Median seasonal profile reveals a strong peak in sales value from October to January, with the highest detrended value exceeding 1.28. Off-peak periods exhibit values closer to the average or slightly below, with detrended values dipping as low as 0.78.
 The following are the implications of the analysis:
