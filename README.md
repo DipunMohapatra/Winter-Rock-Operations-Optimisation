@@ -1,4 +1,19 @@
 # **Winter Rock Operations Optimisation**
+# Table of Contents
+
+# Table of Contents
+
+- [Project Background](#1-project-background)
+- [Executive Summary](#2-executive-summary)
+- [Insights Deep-Dive](#3-insights-deep-dive)
+  - [Investigating Sales Trends](#31-investigating-sales-trends)
+  - [Forecasting Sales of Year-Round Products](#32-forecasting-sales-of-year-round-products)
+  - [Distribution Plan](#33-distribution-plan)
+  - [Supplier Choice Based on MAXIMAX, MAXIMIN, and MINIMAX](#34-supplier-choice-based-on-maximax-maximin-and-minimax)
+  - [Monte Carlo Simulation to Identify Profit Trends](#35-monte-carlo-simulation-to-identify-profit-trends-under-eu-and-us-supplier)
+- [Final Recommendations](#4-final-recommendations)
+
+
 ## **1. Project Background**
 Winter Rock is a leading winter sports retailer in the UK, specialising in ski, snow, and climbing equipment. As Winter Rock prepares for the critical six-month period leading to December 2022, it aims to optimise operations and adapt to changing market dynamics.
 The company’s key challenges include:
