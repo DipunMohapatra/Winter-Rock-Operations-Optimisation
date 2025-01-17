@@ -1,8 +1,6 @@
 # **Winter Rock Operations Optimisation**
 # Table of Contents
 
-# Table of Contents
-
 - [Project Background](#1-project-background)
 - [Executive Summary](#2-executive-summary)
 - [Insights Deep-Dive](#3-insights-deep-dive)
